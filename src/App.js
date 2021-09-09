@@ -1,5 +1,6 @@
 import Test1 from './pages/test1';
 import Test2 from './pages/test2';
+import FinalTest from './pages/final-test';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +16,9 @@ function App() {
           </Route>
           <Route path="/test2">
             <Test2 />
+          </Route>
+          <Route path="/final">
+            <FinalTest />
           </Route>
         </Switch>
     </Router>

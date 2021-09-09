@@ -1,14 +1,15 @@
 import {useState} from 'react';
 
 function useTest2() {
-    const itemsDefault = ['A', 'B', 'C', 'D'];
-    const [items, setItems] = useState(itemsDefault);
+    const itemsDefault = ['Huyen', 'Hoa', 'Hung', 'Long'];
+    const [displayItem, setDisplayItem] = useState(null);
 
-    const addItem = (item) => {
-        setItems([...items, item]);
+    const searchItem = (item) => {
+        const index = itemsDefault.findIndex(i => i === item)
+        setDisplayItem(index + 1);
     }
 
-    return {itemsDefault, items, addItem};
+    return {itemsDefault, searchItem, displayItem};
 }
 
 export default useTest2;
